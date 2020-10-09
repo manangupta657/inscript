@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0175)file:///C:/Users/vipul/AppData/Local/Temp/Rar$EXa14556.37559/CDAC-Virtual-Keyboard-Integration-Single-page-%2D3ba9166973268cdb74a6840c5bc9a6924fc1970c/Inscript%20keyboard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Inscript keyboard</title>
+    
+     <link rel="stylesheet" type="text/css" href="./keyboard_files/cdac-gist-fonts.css">
+    <script async="" src="./keyboard_files/analytics.js.download"></script><script async="" src="./keyboard_files/analytics.js.download"></script><script src="./keyboard_files/jquery.min.js.download"></script>
+    <script type="TEXT/JAVASCRIPT" src="./keyboard_files/CDAC-Typing.min.js.download"> </script><script type="text/javascript" src="./keyboard_files/jquery.caret.min.js.download"></script><link href="./keyboard_files/CDAC-Typing-Script-Style.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./keyboard_files/KeyboardScript.min.js.download"></script><script language="javascript" type="text/javascript" src="./keyboard_files/jquery-ui.min.js.download"></script><link rel="stylesheet" type="text/css" href="./keyboard_files/jquery-ui.min.css"><link rel="stylesheet" type="text/css" href="./keyboard_files/cdac-gist-fonts.min.css"><link rel="stylesheet" type="text/css" href="./keyboard_files/GistFloatingKeyboard.min.css"><script language="javascript" type="text/javascript" src="./keyboard_files/LanguagesArray.min.js.download"></script> 
+<script>
+        $(document).ready(function () {
+            var locale = null;
+            var cookies = document.cookie.split(";");
+            $(cookies).each(function (i, cookie) {
+                if (cookie.indexOf("LanguageLocale=") != -1) {
+                    locale = cookie.split("=")[1];
+                    setLanguage(locale);
+                    $("#language").val(locale);
+                }
+            });
+            if (locale == null) {
+                locale = $('#language').find('option:selected').val();;
+                setLanguage(locale);
+                setCookie(locale);
+            }
+            $('#language').on('change', function () {
+                locale = this.value;
+                setLanguage(locale);
+                setCookie(locale);
+            });
+jQuery(function(){
+   jQuery('#kbdIcon').click();
+   $("#gistFK_cdacLogo").hide();
+   $("#gistFK_CloseBtn").hide();
+   $("#gistFK_gistLogo").replaceWith( '<a href="https://www.xelpmoc.in/" target="_blank">Xelpmoc</a>' );
+});
+            $('#kbdIcon').on('click', function(){
+                //openKeyboard($('#language').find('option:selected').text().toLowerCase());
+				openKeyboard($('#language').find('option:selected').val());
+            });
+ $("#gist_flt_kbdBX_firstInnerBox").css({top: 5000, left: 200});
+            function setCookie(langLocale)
+            {
+                /*Setting Cookie*/
+                var today = new Date();
+                var expire = new Date();
+                expire.setTime(today.getTime() + 3600000 * 24 * 7);
+                document.cookie = "LanguageLocale=" + langLocale + "; expires=" + expire.toUTCString();
+                /*Setting Cookie*/
+            }
+
+            enableTyping(new Array('nameInput'), null, 'NAME', locale,false);
+            enableTyping(new Array('addressInput'), null, 'ADDRESS', locale,false);
+            enableTyping(new Array('nameSource'), new Array('nameTarget'), 'NAME', locale,false);
+            enableTyping(new Array('addressSource'), new Array('addressTarget'), 'ADDRESS', locale,false);
+        });
+
+	 window.onload = function() {
+ 	 document.getElementById("nameInput").focus();
+};
+</script>
+</head>
+<body style="height: 100%; cursor: auto;"><elem id="democontainer_nameInput" class="element"><div class="Gist_Typing_Popup_MainBX" id="popupBox_nameInput" style="display: none;"><div id="PopUpInputBox_nameInput" class="Gist_Typing_Popup_PopupTypingBox" style="display: none;"></div><div id="Suggestions_nameInput" class="Gist_Typing_Popup_SuggestnBox" style="display: none;"></div><div id="page_nameInput" class="Gist_Typing_Popup_PagingDiv" style="display: none;"><input type="button" value="&lt;" id="prev" class="Gist_Typing_Popup_PagingBtn" style="float:left;" onclick="prevPage()"><input type="button" value="&gt;" id="next" class="Gist_Typing_Popup_PagingBtn" style="float:right;" onclick="nextPage(); clearSelection();"></div><div id="imageDiv_Id" class="Gist_Typing_Popup_CdacImgDiv"><img src="./keyboard_files/CDAC-GIST.bmp" alt="CDAC Gist" class="Gist_Typing_Popup_CdacImg"></div></div></elem>
+<div>
+        <form name="form6" action="file:///C:/Users/vipul/AppData/Local/Temp/Rar$EXa14556.37559/CDAC-Virtual-Keyboard-Integration-Single-page--3ba9166973268cdb74a6840c5bc9a6924fc1970c/Inscript%20keyboard.html"><center>
+        <h3>  Inscript Keyboard </h3>
+<textarea name="txtInputSpace1" rows="7" cols="100" id="nameInput" placeholder="Enter your text here" autocomplete="off" style="font-family: gist_hindi_font;"></textarea> &nbsp; &nbsp; &nbsp; &nbsp;<br><label><b class="">Select Language</b></label>&nbsp; &nbsp; &nbsp;<select id="language">
+                                            <option value="en_in">English</option>
+                                        <option value="hi_in" selected="selected" alt="Type in Hindi">Hindi</option>
+                                        <option value="pn_in" alt="Type in Panjabi">Punjabi</option>
+                                        <option value="gj_in" alt="Type in Gujarati">Gujarati</option>
+                                        <option value="mr_in" alt="Type in Marathi">Marathi</option>
+					<option value="as_in" alt="Type in Assamese">Assamese</option>
+					<option value="bn_in" alt="Type in Bengali">Bengali</option>
+                                        <option value="ml_in" alt="Type in Malayalam">Malayalam</option>
+                                        <option value="tm_in" alt="Type in Tamil">Tamil</option>
+                                        <option value="tl_in" alt="Type in Telugu">Telugu</option>
+                                        <option value="kn_in" alt="Type in Kannada">Kannada</option>
+                                        <option value="or_in" alt="Type in Oriya">Odia</option>
+                                        <option value="ur_in" alt="Type in Odia">Urdu</option> 
+                                        </select>&nbsp; &nbsp;<a href="file:///C:/Users/vipul/AppData/Local/Temp/Rar$EXa14556.37559/CDAC-Virtual-Keyboard-Integration-Single-page--3ba9166973268cdb74a6840c5bc9a6924fc1970c/Inscript%20keyboard.html#" id="kbdIcon"><button>Keyboard</button>
+                    </a></center></form></div><a href="file:///C:/Users/vipul/AppData/Local/Temp/Rar$EXa14556.37559/CDAC-Virtual-Keyboard-Integration-Single-page--3ba9166973268cdb74a6840c5bc9a6924fc1970c/Inscript%20keyboard.html#" id="kbdIcon">
+		
+            
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+    
+    
+
+<script>
+
+</script>
+
+</a><div id="gistFK_kbdBox" class="gist_flt_kbdBX backgroundClrTheme1 ui-draggable ui-draggable-handle" align="center" style="left: 320.5px; top: 382.5px;"><div id="gist_flt_kbdBX_firstInnerBox"><div id="gistFK_wdrag" class="gist_flt_wdrag gist_flt_wdrag_Theme1"><div id="gistFK_kbdTitle" onmouseover="over=true;" onmouseout="over=false;">Inscript Keyboard</div><div id="gistFK_kbdClose"><img id="gistFK_CloseBtn" class="gistFK_Close_Btn" alt="Close" src="./keyboard_files/close.png" style="display: none;"></div></div><div id="gistFK_kbdButtons" style="font-family: gist_hindi_font;"><div id="firstRowBTN"><input type="button" id="gistFK_b1" title="~" value=" " class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b2" title="1" value="1" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b3" title="2" value="2" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b4" title="3" value="3" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b5" title="4" value="4" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b6" title="5" value="5" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b7" title="6" value="6" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b8" title="7" value="7" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b9" title="8" value="8" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b10" title="9" value="9" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b11" title="0" value="0" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b12" title="-" value="-" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b13" title="=" value="ृ" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_Bksp" title="Backspace" value="Bksp" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1" style="width: 43pt !important;"></div><div id="firstRowBTN"><input type="button" id="gistFK_Tab" title="Tab" value="Tab" class="gist_flt_kbdBtnDisable commonButtonStyle themeBorder1" style="width: 43pt !important;" disabled="disabled"><input type="button" id="gistFK_b14" title="Q" value="ौ" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b15" title="W" value="ै" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b16" title="E" value="ा" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b17" title="R" value="ी" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b18" title="T" value="ू" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b19" title="Y" value="ब" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b20" title="U" value="ह" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b21" title="I" value="ग" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b22" title="O" value="द" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b23" title="P" value="ज" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b24" title="[" value="ड" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b25" title="]" value="़" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b26" title="\" value="ॉ" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"></div><div id="firstRowBTN"><input type="button" id="gistFK_Lock" title="Caps Lock" value="Caps" class="gist_flt_kbdBtnDisable commonButtonStyle themeBorder1" style="width: 50pt !important;" disabled="disabled"><input type="button" id="gistFK_b27" title="A" value="ो" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b28" title="S" value="े" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b29" title="D" value="्" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b30" title="F" value="ि" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b31" title="G" value="ु" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b32" title="H" value="प" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b33" title="J" value="र" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b34" title="K" value="क" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b35" title="L" value="त" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b36" title=";" value="च" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b37" title="" '="" value="ट" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_Enter" title="Enter" value="Enter" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1" style="width: 44pt !important;"></div><div id="firstRowBTN"><input type="button" id="gistFK_btnShift1" title="Shift" value="Shift" class="commonButtonStyle themeBorder1 themeBackground1 gist_flt_kbd_shiftUp" style="width: 60pt !important;"><input type="button" id="gistFK_b38" title="Z" value=" " class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b39" title="X" value="ं" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b40" title="C" value="म" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b41" title="V" value="न" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b42" title="B" value="व" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b43" title="N" value="ल" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b44" title="M" value="स" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b45" title="," value="," class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b46" title="." value="." class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_b47" title="/" value="य" class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1"><input type="button" id="gistFK_btnShift2" title="Shift" value="Shift" class="commonButtonStyle themeBorder1 themeBackground1 gist_flt_kbd_shiftUp" style="width: 60pt !important;"></div></div><div id="gistFK_BottomBar"><a href="http://cdac.in/" target="_blank" title="CDAC"><img id="gistFK_cdacLogo" alt="CDAC" src="./keyboard_files/c-dacLogo.png" style="display: none;"></a><a href="http://www.cdac.in/index.aspx?id=gist" target="_blank" title="CDAC GIST"><a href="https://www.xelpmoc.in/" target="_blank">Xelpmoc</a></a><div id="gistFK_spaceBar"><input type="button" id="gistFK_SpaceBar" title="Space" value=" " class="gist_flt_kbdBtn commonButtonStyle themeBorder1 themeBackground1" style="width:150pt !important;"></div><div id="gistFK_altGr"><input type="button" id="gistFK_lchange" title="Change Layout" value="AltGr" class="commonButtonStyle themeBorder1 themeBackground1 gistFK_lchange_Up"> </div><div id="gistFK_themes"><input type="button" title="Theme Blue" id="gistFK_theme1" value="" class="gistFK_SmallBox"><input type="button" title="Theme Gray" id="gistFK_theme2" value="" class="gistFK_SmallBox"><input type="button" title="Theme Green" id="gistFK_theme3" value="" class="gistFK_SmallBox"></div></div></div></div></body></html>
